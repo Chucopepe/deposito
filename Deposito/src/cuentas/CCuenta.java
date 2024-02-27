@@ -1,4 +1,9 @@
 package cuentas;
+
+/**
+ * Clase sobre una cuenta
+ * @author chuco
+ */
 public class CCuenta {
 
 
@@ -99,11 +104,20 @@ public class CCuenta {
         cuenta=cue;
         saldo=sal;
     }
+	/**
+	 * Devuelve el estado de la cuenta
+	 * @return saldo en cuenta
+	 */
 
     public double estado()
     {
         return saldo;
     }
+    /**
+     * Ingresa cantidad en cuenta
+     * @param cantidad que se ingresa
+     * @throws Exception si es negativa la cantidad
+     */
 
     public void ingresar(double cantidad) throws Exception
     {
@@ -111,6 +125,11 @@ public class CCuenta {
             throw new Exception("No se puede ingresar una cantidad negativa");
         saldo = saldo + cantidad;
     }
+    /**
+     * Retira una cantidad de la cuenta
+     * @param cantidad que se retira
+     * @throws Exception  si la cantidad 0 o inferior
+     */
 
     public void retirar(double cantidad) throws Exception
     {
